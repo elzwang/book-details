@@ -1,0 +1,15 @@
+query GET_BOOK_DETAILS($testId: ID) {
+    book(id: $testId) {
+        id
+        name
+        author {
+            firstName
+            lastName
+        }
+        genre
+        reviews {
+            rating
+            summary
+        }
+    }
+}

@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: book-details
+
+server:
+  http2:
+    enabled: true
+graphql:
+  servlet:
+#    max-query-depth: 10
+  playground:
+    enabled: false
+
+voyager:
+  enabled: false
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+graphql:
+  playground:
+    enabled: true
+    tabs:
+      - name: Book details sample query
+        query: classpath:graphql/playground/book_query.graphql
+        variables: classpath:graphql/playground/book_variables.json
+
+voyager:
+  enabled: true

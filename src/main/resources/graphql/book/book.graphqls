@@ -1,0 +1,8 @@
+# This is a Book type
+type Book {
+    id: ID! # book id
+    name: String! # book name
+    author: Author # book author
+    genre: Genre # book genre
+    reviews: [Review!]! # list of reviews for this book
+}

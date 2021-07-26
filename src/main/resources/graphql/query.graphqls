@@ -1,0 +1,5 @@
+# All available queries on this graphQL server.
+type Query {
+    # get book by id
+    book(id: ID): Book
+}
